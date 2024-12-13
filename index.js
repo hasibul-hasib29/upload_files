@@ -36,6 +36,7 @@ const db = mysql.createConnection({
   user: process.env.HOST_USER,
   password: process.env.HOST_PASSWORD,
   database: process.env.DATABASE_NAME,
+  port: process.env.DATABASE_PORT || 3306,
 }).promise();
 
 const upload = multer({ storage});
